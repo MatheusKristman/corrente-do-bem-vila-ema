@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AlignJustify, Dot, Phone } from "lucide-react";
+import { AlignJustify, Phone } from "lucide-react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
 import { Events, Link as ScrollLink } from "react-scroll";
 
