@@ -1,10 +1,17 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
 import Image from "next/image";
+import { Element } from "react-scroll";
+
+import { Button } from "@/components/ui/button";
 
 export function HowToHelp() {
   return (
     <section className="w-full mt-24 bg-secondary/10 pb-24">
-      <div className="w-full px-6 flex flex-col gap-12 sm:px-16 lg:container lg:mx-auto lg:flex-row-reverse">
+      <Element
+        name="how-to-help"
+        className="w-full px-6 flex flex-col gap-12 sm:px-16 lg:container lg:mx-auto lg:flex-row-reverse"
+      >
         <div className="relative w-full aspect-square -translate-y-10 sm:w-3/5 sm:self-end lg:w-1/2">
           <Image
             src="/assets/images/how-to-help.png"
@@ -39,7 +46,7 @@ export function HowToHelp() {
             Entre em contato
           </Button>
         </div>
-      </div>
+      </Element>
     </section>
   );
 }

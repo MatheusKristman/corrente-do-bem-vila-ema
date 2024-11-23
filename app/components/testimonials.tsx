@@ -1,34 +1,38 @@
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+"use client";
+
 import Image from "next/image";
+import { Element } from "react-scroll";
+
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 const TESTIMONIALS = [
   {
     id: 1,
-    name: "Forem ipsum",
-    job: "Forem ipsum",
+    name: "Ana Cláudia Souza",
+    job: "Professora",
     message:
-      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
+      "Participar dos eventos da Corrente do Bem tem sido uma experiência transformadora. Ver o sorriso das crianças e a gratidão das famílias é algo que me motiva a continuar ajudando.",
   },
   {
     id: 2,
-    name: "Forem ipsum",
-    job: "Forem ipsum",
+    name: "Rafael Lima",
+    job: "Empresário",
     message:
-      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
+      "A ONG faz um trabalho incrível ao conectar a comunidade e oferecer apoio a quem mais precisa. É inspirador ver como pequenas ações podem gerar um impacto tão grande.",
   },
   {
     id: 3,
-    name: "Forem ipsum",
-    job: "Forem ipsum",
+    name: "Marina Oliveira",
+    job: "Estudante de Enfermagem",
     message:
-      "Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis diam sit amet lacinia. Aliquam in elementum tellus.",
+      "Como voluntária, aprendi o verdadeiro significado de solidariedade. A dedicação e o amor da equipe da Corrente do Bem me mostraram que juntos podemos fazer a diferença.",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="w-full mt-24 block relative">
-      <div className="w-full flex flex-col sm:flex-row">
+    <section className="w-full block relative">
+      <Element name="testimonials" className="w-full flex flex-col sm:flex-row">
         <div className="relative w-full aspect-square sm:w-2/5 after:content-[''] lg:aspect-video after:block after:h-full after:w-full after:absolute after:left-0 after:right-0 after:top-0 after:bottom-0 after:bg-gradient-to-t after:from-foreground after:from-20% after:to-transparent sm:after:bg-gradient-to-l">
           <Image src="/assets/images/testimonial.jpeg" alt="Depoimentos" fill className="object-cover object-center" />
         </div>
@@ -60,7 +64,7 @@ export function Testimonials() {
             </CarouselContent>
           </Carousel>
         </div>
-      </div>
+      </Element>
     </section>
   );
 }
