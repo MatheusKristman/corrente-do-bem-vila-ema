@@ -138,7 +138,12 @@ function MobileMenu() {
               (11) 91234-1234
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer noopener" className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/correntedobem.vilaema/"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center gap-4"
+            >
               <FaInstagram size={24} className="text-accent" />
               @correntedobem.vilaema
             </a>
